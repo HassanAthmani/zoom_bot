@@ -40,6 +40,7 @@ def join():
 
     except Exception:
         print("Zoom application has not been executed, check zoom path")
+        return 0
 
     base_path = str(os.path.dirname(os.path.abspath(__file__))).replace("//", "/")
     locator_and_click(base_path + '/icons/join_meeting.png')
