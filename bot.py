@@ -10,20 +10,20 @@ from meeting_config import read_credentials
 def locator_and_click(image_path):
     loc = pyautogui.locateCenterOnScreen(image_path)
     pyautogui.click(loc)
-    time.sleep(5)
+    time.sleep(7)
     return loc
 
 
 def locator_and_double_click(image_path):
     loc = pyautogui.locateCenterOnScreen(image_path)
     pyautogui.doubleClick(loc)
-    time.sleep(5)
+    time.sleep(7)
     return loc
 
 
 def locator(image_path):
     loc = pyautogui.locateCenterOnScreen(image_path)
-    time.sleep(5)
+    time.sleep(7)
     return loc
 
 
@@ -45,7 +45,7 @@ def join():
 
     time.sleep(10)
     locator_and_click(base_path + '/icons/join_meeting.png')
-    loc = locator(base_path + '/icons/meeting_id_input.png')
+    loc = locator_and_click(base_path + '/icons/meeting_id_input.png')
     pyautogui.write(meeting_id, interval=0.15)
     x, y = loc
     pyautogui.click((x, y + 43))
