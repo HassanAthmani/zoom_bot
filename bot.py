@@ -34,6 +34,7 @@ def join():
     passcode = str(c["passcode"])
     name = str(c["name"])
     email = str(c["email"])
+    base_path = str(os.path.dirname(os.path.abspath(__file__))).replace("//", "/")
 
     try:
         subprocess.Popen(zoom_path)
@@ -42,7 +43,7 @@ def join():
         print("Zoom application has not been executed, check zoom path")
         return 0
 
-    base_path = str(os.path.dirname(os.path.abspath(__file__))).replace("//", "/")
+    time.sleep(10)
     locator_and_click(base_path + '/icons/join_meeting.png')
     loc = locator(base_path + '/icons/meeting_id_input.png')
     pyautogui.write(meeting_id, interval=0.15)
@@ -69,5 +70,5 @@ def join():
 if __name__ == '__main__':
     print("Bot has started")
     print("Hold on a couple of seconds -- ")
-    time.sleep(30)
+    time.sleep(15)
     join()
