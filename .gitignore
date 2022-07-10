@@ -1,0 +1,9 @@
+*.ini
+*.sql
+*.xml
+*.pyc
+*.log
+example.py
+example1.py
+/.idea
+/_pycache_
