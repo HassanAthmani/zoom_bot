@@ -8,21 +8,21 @@ from meeting_config import read_credentials
 
 
 def locator_and_click(image_path):
-    loc = pyautogui.locateCenterOnScreen(image_path)
+    loc = pyautogui.locateCenterOnScreen(image_path, grayscale=False, confidence=.5)
     pyautogui.click(loc)
     time.sleep(7)
     return loc
 
 
 def locator_and_double_click(image_path):
-    loc = pyautogui.locateCenterOnScreen(image_path)
+    loc = pyautogui.locateCenterOnScreen(image_path, grayscale=False, confidence=.5)
     pyautogui.doubleClick(loc)
     time.sleep(7)
     return loc
 
 
 def locator(image_path):
-    loc = pyautogui.locateCenterOnScreen(image_path)
+    loc = pyautogui.locateCenterOnScreen(image_path, grayscale=False, confidence=.5)
     time.sleep(7)
     return loc
 
